@@ -2,3 +2,19 @@
 This is a classroom git repository for sharing
 
 Pre test Link :  https://forms.cloud.microsoft/r/RhNi877V3h
+
+```sql
+create table emp(empno int primary key, name varchar(20), address varchar(20), salary double);
+
+insert into emp(empno,name,address,salary) values (101,'Aman','Kanpur',56000);
+insert into emp(empno,name,address,salary) values(102,'Jagan','Hyderabad',66000);
+insert into emp(empno,name,address,salary) values(112,'Raja','bangalore',58000);
+insert into emp(empno,name,address,salary) values(103,'James','Mumbai',76000);
+insert into emp(empno,name,address,salary) values(104,'Rupal','Noida',96000);
+insert into emp(empno,name,address,salary) values(105,'Karan','Mumbai',56000);
+insert into emp(empno,name,address,salary) values(106,'Narendra','Delhi',56000);
+insert into emp(empno,name,address,salary) values(107,'Amit','Delhi',56000);
+insert into emp(empno,name,address,salary) values(108,'Arun','Chennai',56000);
+insert into emp(empno,name,address,salary) values(109,'Kishore','Kochi',56000);
+sql
+
