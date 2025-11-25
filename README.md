@@ -16,5 +16,5 @@ insert into emp(empno,name,address,salary) values(106,'Narendra','Delhi',56000);
 insert into emp(empno,name,address,salary) values(107,'Amit','Delhi',56000);
 insert into emp(empno,name,address,salary) values(108,'Arun','Chennai',56000);
 insert into emp(empno,name,address,salary) values(109,'Kishore','Kochi',56000);
-sql
+```
 
