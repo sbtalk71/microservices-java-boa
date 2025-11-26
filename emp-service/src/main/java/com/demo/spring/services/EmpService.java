@@ -44,4 +44,15 @@ public class EmpService {
 		  }
 	  }
 	 
+	  public Emp updateEmp(Emp e) {
+		  
+		  if(empRepository.existsById(e.getEmpId())) {
+			  return empRepository.save(e);
+		  }else {
+			 
+			  throw new EmpNotFoundException("Emp not found");
+		  }
+	  }
+	 
+	  
 }
