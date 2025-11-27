@@ -1,13 +1,10 @@
 spring:
   application:
     name: hr-service
-  cloud:
-    loadbalancer:
-      configurations: weighted
 eureka:
  client:
-  register-with-eureka: true
-  fetch-registry: true
+  register-with-eureka: false
+  fetch-registry: false
   service-url:
    defaultZone: http://localhost:8761/eureka/
 management:

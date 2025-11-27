@@ -7,7 +7,10 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.web.client.RestClient;
+
+import com.demo.spring.config.StaticServiceInstanceSupplier;
 
 
 @SpringBootApplication
@@ -26,13 +29,9 @@ public class HrServiceApplication {
 	}
 	
 	@Bean
-	public ServiceInstanceListSupplier discoveryClientServiceInstanceListSupplier(
-			ConfigurableApplicationContext context) {
-		return ServiceInstanceListSupplier.builder()
-					.withDiscoveryClient()
-					.withWeighted()
-					.withCaching()
-					.build(context);
+	@Primary
+	public ServiceInstanceListSupplier serviceInstanceListSupplier() {
+		return new StaticServiceInstanceSupplier("my-service");
 	}
 	
 }

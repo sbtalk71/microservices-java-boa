@@ -11,7 +11,7 @@ public class UserService {
 	private NotificationService notificationService;
 	
 	//@Autowired
-	public UserService(@Qualifier("SMSService") NotificationService notificationService) {
+	public UserService(NotificationService notificationService) {
 		System.out.println(" Object created for "+this.getClass().getSimpleName());
 		this.notificationService=notificationService;
 	}
