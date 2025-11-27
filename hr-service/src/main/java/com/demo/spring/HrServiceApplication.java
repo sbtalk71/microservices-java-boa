@@ -25,7 +25,7 @@ public class HrServiceApplication {
 		return RestClient.builder();
 	}
 	
-	@Bean
+	//@Bean
 	public ServiceInstanceListSupplier discoveryClientServiceInstanceListSupplier(
 			ConfigurableApplicationContext context) {
 		return ServiceInstanceListSupplier.builder()

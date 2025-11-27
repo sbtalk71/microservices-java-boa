@@ -1,0 +1,23 @@
+server:
+  port: 9090
+spring:
+ application:
+   name: api-gateway-reactive
+ cloud:
+   gateway:
+     server: 
+      webflux:
+        routes:
+         - id: emp-backend
+           uri: lb://emp-service
+           predicates:
+             Path=/emp/**
+         - id: hr-back-end
+           uri: lb://hr-service
+           predicates: 
+             Path=/hr/**
+           
+         - id: test-uri
+           uri: https://www.google.co.in
+           predicates:
+             Path=/test/**

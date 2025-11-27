@@ -1,9 +1,6 @@
 spring:
   application:
     name: hr-service
-  cloud:
-    loadbalancer:
-      configurations: weighted
 eureka:
  client:
   register-with-eureka: true
