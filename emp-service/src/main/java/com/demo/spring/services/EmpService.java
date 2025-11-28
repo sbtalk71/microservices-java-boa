@@ -10,6 +10,8 @@ import com.demo.spring.exceptions.EmpExistsException;
 import com.demo.spring.exceptions.EmpNotFoundException;
 import com.demo.spring.repos.EmpRepository;
 
+import io.micrometer.observation.annotation.Observed;
+
 @Service
 public class EmpService {
 
@@ -19,6 +21,7 @@ public class EmpService {
 		this.empRepository = empRepository;
 	}
 
+	@Observed(name="find.one")
 	public Emp findEmpById(Integer id) {
 		Optional<Emp> empOp = empRepository.findById(id);
 
@@ -29,12 +32,14 @@ public class EmpService {
 		}
 	}
 	
+	@Observed(name="find.list")
 	public List<Emp> getAllEmpList(){
 		return empRepository.findAll();
 	}
 	
 	
 	
+	@Observed(name="save.one")
 	  public Emp saveEmp(Emp e) {
 	  
 		  if(empRepository.existsById(e.getEmpId())) {
@@ -44,6 +49,7 @@ public class EmpService {
 		  }
 	  }
 	 
+	@Observed(name="update.one")
 	  public Emp updateEmp(Emp e) {
 		  
 		  if(empRepository.existsById(e.getEmpId())) {

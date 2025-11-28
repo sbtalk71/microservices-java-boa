@@ -1,6 +1,7 @@
 spring:
   application:
     name: hr-service
+ 
 eureka:
  client:
   register-with-eureka: true

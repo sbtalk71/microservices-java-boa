@@ -3,6 +3,10 @@ This is a classroom git repository for sharing
 
 Pre test Link :  https://forms.cloud.microsoft/r/RhNi877V3h
 
+Post Assessment Link: https://forms.cloud.microsoft/r/UGfnCrkShj
+
+Feedback Link: https://forms.cloud.microsoft/r/ZTMpJiUwp8
+
 ```sql
 create table emp(empno int primary key, name varchar(20), address varchar(20), salary double);
 
